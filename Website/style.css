@@ -1,41 +1,12 @@
-/* affect root level */
-:root {
-  font-size: 16px;
-  font-family: "Open Sans";
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --transition-speed: 600ms;
-}
+/* animations */
 
-/* affect body */
-body {
-  color: black;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-}
-
-/* mess with scrollbar width */
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-/* scrollbar background color */
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-/* actual scrollbar color */
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-
-/* affect main tag */
-main {
-  margin-left: 5rem;
-  padding: 1rem;
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
 }
 
 .navbar {
@@ -43,6 +14,7 @@ main {
   background-color: var(--bg-primary);
   transition: width 600ms ease;
   overflow: scroll;
+  border-right: 1px solid rgba(235, 235, 235, 0.15);
 }
 
 .navbar-nav {
@@ -69,8 +41,8 @@ main {
   height: 5rem;
   color: var(--text-primary);
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -91,11 +63,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #acc8e5;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #acc8e5;
 }
 
 .fa-primary,
@@ -123,11 +95,10 @@ main {
   display: inline;
   position: absolute;
   left: -999px;
-  transition: var(--transition-speed);
 }
 
 .navbar:hover .logo svg {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 
 /* Small screens */
@@ -172,10 +143,143 @@ main {
   }
 
   .navbar:hover .logo svg {
-    margin-left: 11rem;
+    margin-left: 12rem;
   }
 
   .navbar:hover .logo-text {
     left: 0px;
   }
+}
+
+/* ---------------------------- MY CSS BEGINS HERE, ABOVE IS ALL NAVBAR ---------------------------- */
+
+/* ----- GLOBAL ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+  --text-primary: rgb(232, 232, 232);
+  --text-secondary: #1ac000;
+  --bg-primary: black;
+  --bg-secondary: black;
+  --transition-speed: 600ms;
+}
+
+body {
+  color: rgb(232, 232, 232);
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem;
+}
+
+/* ----- SECTIONS ----- */
+
+.section,
+.title-section {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-section,
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6 {
+  background-color: #000000;
+  border-bottom: 3px solid rgba(197, 162, 109, 0.15);
+  color: rgb(232, 232, 232);
+}
+
+.title-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.magic {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    purple,
+    violet,
+    rgb(251, 126, 147),
+    purple
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sub-title {
+  font-size: 2rem;
+}
+
+.astronaut {
+  height: 50%;
+}
+
+.left-div,
+.right-div {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.right-div {
+  margin-right: 40px;
+  gap: 20px;
+}
+
+.intro-question {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  padding-right: 59px;
+}
+
+.intro-first-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.intro-second-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
 }
