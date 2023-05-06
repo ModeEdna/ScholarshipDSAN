@@ -132,6 +132,12 @@ Highcharts.chart("money-chart", {
     y: 50,
   },
 
+  subtitle: {
+    text: "Figure 2.1",
+    verticalAlign: "top",
+    y: 70,
+  },
+
   legend: {
     // labelFormat: '{name} <span style="opacity: 0.4">{y}</span>',
     enabled: false,
@@ -198,6 +204,12 @@ Highcharts.chart("benefits-chart", {
     x: 0,
     y: -30,
     verticalAlign: "bottom",
+  },
+
+  subtitle: {
+    text: "Figure 2.2",
+    verticalAlign: "top",
+    y: 340,
   },
 
   legend: {

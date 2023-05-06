@@ -15,6 +15,7 @@
   transition: width 600ms ease;
   overflow: scroll;
   border-right: 1px solid rgba(235, 235, 235, 0.15);
+  z-index: 999;
 }
 
 .navbar-nav {
@@ -405,4 +406,8 @@ main {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: left;
+}
+
+.section3-1 .right-div .word-cloud-question {
+  margin-bottom: -15px;
 }
