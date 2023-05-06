@@ -1,12 +1,15 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="theme.js"></script>
+  <script defer src="script.js"></script>
   <link rel="stylesheet" href="style.css" />
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
   />
   <title>DSAN Job Market Analysis</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 
 <body>
@@ -236,15 +239,37 @@
           I'll use data that comes from a web-crawl, which identified job posts
           of interest to the DSAN community. 10 query terms were used (e.g. data
           scientist, data analyst, etc.) for locations both in D.C. and across
-          the U.S. This analysis explores the data to help students understand
-          the job market and identify trends that could help them narrow their
-          search.
+          the U.S. After checking for duplicates, there were
+          <strong>500+ jobs</strong> left. This analysis explores the data to
+          help students understand the job market and identify trends that could
+          help them narrow their search.
         </span>
       </div>
     </div>
     <div class="section section2" id="overview">
-      <div class="left-div">A</div>
-      <div class="right-div">B</div>
+      <div class="left-div" id="wordcloudTitles">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
+      <div class="right-div">
+        <span class="word-cloud-question">
+          What are the most common job titles?
+        </span>
+        <span class="word-cloud-text">
+          Mt first thought was to understand the most common job titles.
+        </span>
+      </div>
+    </div>
+    <div class="section section2-1" id="overview">
+      <span class="word-cloud-companies-text">
+        The first graph shows us that the most common job titles are:
+      </span>
+      <div class="left-div" id="wordcloudCompanies">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
     </div>
     <div class="section section3" id="take">
       <div class="left-div">A</div>
