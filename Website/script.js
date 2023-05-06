@@ -47,7 +47,11 @@ Highcharts.chart("wordcloudTitles", {
     },
   ],
   title: {
-    text: "Top 30 Most Common Job Titles",
+    text: " ",
+    floating: true,
+    margin: 0,
+    verticalAlign: "top",
+    y: 55,
   },
   subtitle: {
     text: "Figure 1.1",
@@ -105,10 +109,10 @@ Highcharts.chart("wordcloudCompanies", {
     },
   ],
   title: {
-    text: "Top 30 Most Common Companies",
+    text: " ",
   },
   subtitle: {
-    text: "Figure 1.1",
+    text: "Figure 1.2",
     verticalAlign: "bottom",
   },
 });

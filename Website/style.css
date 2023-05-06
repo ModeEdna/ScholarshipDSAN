@@ -206,9 +206,13 @@
 
 .highcharts-title {
   fill: rgb(232, 232, 232) !important;
+  y: 70px;
 }
 
-#wordcloudTitles {
+#wordcloudTitles,
+#wordcloudCompanies,
+#money-chart,
+#benefits-chart {
   height: 90%;
 }
 
@@ -346,7 +350,8 @@ main {
   padding-right: 59px;
 }
 
-.intro-first-text {
+.intro-first-text,
+.word-cloud-text {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: left;
@@ -368,4 +373,28 @@ main {
 
 .section2 {
   border-bottom: 0px;
+}
+
+.section2 .right-div {
+  padding-left: 50px;
+}
+
+.word-cloud-question {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.wordcloudCompanies {
+  margin: 0;
+}
+
+#wctext2 {
+  margin-left: 30px;
+}
+
+.word-cloud-text2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
 }

@@ -9,7 +9,7 @@
   <title>DSAN Job Market Analysis</title>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
 </head>
 
 <body>
@@ -253,27 +253,98 @@
         </figure>
       </div>
       <div class="right-div">
-        <span class="word-cloud-question">
-          What are the most common job titles?
-        </span>
+        <span class="word-cloud-question"> Which jobs are available? </span>
         <span class="word-cloud-text">
-          Mt first thought was to understand the most common job titles.
+          Before getting into the nitty gritty, we need to know which jobs are
+          available and who is offering them. Fig. 1.1 shows the 30 most common
+          job titles of our search. Variations of Data Scientist, Data Analyst,
+          and Machine Learning Engineer are the most needed positions. The other
+          two common titles involve NLP or Blockchain technology. <br />
+          <br />
+          With the DSAN program offering a wide range of classes, our students
+          should feel prepared to take on any of these roles. However, it is
+          important to note that the job titles are not always indicative of the
+          actual work. For example, a Data Scientist could be doing more data
+          engineering than data science; it is important to read job
+          descriptions to fully understand the role.
         </span>
       </div>
     </div>
     <div class="section section2-1" id="overview">
-      <span class="word-cloud-companies-text">
-        The first graph shows us that the most common job titles are:
-      </span>
-      <div class="left-div" id="wordcloudCompanies">
+      <div class="left-div" id="wctext2">
+        <span class="word-cloud-question"> Who is offering them? </span>
+        <span class="word-cloud-text2">
+          <br />Sometimes a job title isn't enough; we want to know who is
+          offering the position. After all, company culture and values can be a
+          deal-maker! The data had postings from many companies, but 5 of them
+          were more present than all others: Upwork, Booz Allen, Apple,
+          Deloitte, and Walmart.
+          <br />
+          <br />
+          Further research on Upwork revealed that they are a freelancing site.
+          The job posts were for contract work, which is not ideal for students
+          looking for full-time positions. I would advise DSAN students to look
+          past these postings and instead focus on more traditional, full-time
+          jobs. The other common companies from the dataset are all well-known
+          and have a presence in the D.C. area. This is great news for students
+          who want to stay in the area after graduation!
+        </span>
+      </div>
+      <div class="right-div wordcloudCompanies" id="wordcloudCompanies">
         <figure class="highcharts-figure">
           <div id="container"></div>
         </figure>
       </div>
     </div>
-    <div class="section section3" id="take">
-      <div class="left-div">A</div>
-      <div class="right-div">B</div>
+    <div class="section section3-1" id="overview">
+      <div class="left-div" id="money-chart">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
+      <div class="right-div">
+        <span class="word-cloud-question"> Let's talk money! </span>
+        <span class="word-cloud-text">
+          Before getting into the nitty gritty, we need to know which jobs are
+          available and who is offering them. Fig. 1.1 shows the 30 most common
+          job titles of our search. Variations of Data Scientist, Data Analyst,
+          and Machine Learning Engineer are the most needed positions. The other
+          two common titles involve NLP or Blockchain technology. <br />
+          <br />
+          With the DSAN program offering a wide range of classes, our students
+          should feel prepared to take on any of these roles. However, it is
+          important to note that the job titles are not always indicative of the
+          actual work. For example, a Data Scientist could be doing more data
+          engineering than data science; it is important to read job
+          descriptions to fully understand the role.
+        </span>
+      </div>
+    </div>
+    <div class="section section3-2" id="overview">
+      <div class="left-div" id="benefits-chart">
+        <span class="word-cloud-question"> How about benefits? </span>
+        <span class="word-cloud-text2">
+          <br />Sometimes a job title isn't enough; we want to know who is
+          offering the position. After all, company culture and values can be a
+          deal-maker! The data had postings from many companies, but 5 of them
+          were more present than all others: Upwork, Booz Allen, Apple,
+          Deloitte, and Walmart.
+          <br />
+          <br />
+          Further research on Upwork revealed that they are a freelancing site.
+          The job posts were for contract work, which is not ideal for students
+          looking for full-time positions. I would advise DSAN students to look
+          past these postings and instead focus on more traditional, full-time
+          jobs. The other common companies from the dataset are all well-known
+          and have a presence in the D.C. area. This is great news for students
+          who want to stay in the area after graduation!
+        </span>
+      </div>
+      <div class="right-div wordcloudCompanies" id="wordcloudCompanies">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
     </div>
     <div class="section section4" id="give">
       <div class="left-div">A</div>
