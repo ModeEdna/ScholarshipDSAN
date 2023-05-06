@@ -10,6 +10,7 @@
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
   <script src="https://code.highcharts.com/modules/item-series.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
 </head>
 
 <body>
@@ -87,7 +88,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="#take" class="nav-link">
+        <a href="#you-get" class="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -109,7 +110,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="#give" class="nav-link">
+        <a href="#reqs" class="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -131,7 +132,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="#relationships" class="nav-link">
+        <a href="#trends" class="nav-link">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -296,7 +297,7 @@
         </figure>
       </div>
     </div>
-    <div class="section section3-1">
+    <div class="section section3-1" id="you-get">
       <div class="left-div">
         <div class="left-div div3-1">
           <figure class="highcharts-figure">
@@ -331,14 +332,98 @@
       </div>
     </div>
     <div class="section section4" id="give">
-      <div class="left-div">A</div>
-      <div class="right-div">B</div>
+      <div class="left-div">
+        <span class="word-cloud-question"> Let's talk about money! </span>
+        <span class="word-cloud-text">
+          DSAN jobs are high-paying: the lower end starts around $100K and they
+          tend to max out around $200K. However, there is a big range for each
+          salary (~$60K). This is most likely due to experience amount and
+          skills obtained prior to the job.<br />
+          <br />
+        </span>
+        <span class="word-cloud-question"> How about benefits? <br /> </span>
+        <span class="word-cloud-text">
+          401K, health/life/dental insurance, bonus, tuition payments are all
+          considered to be prime benefits. Fig 3.2 shows that 33% of the jobs
+          that listed benefits made no mention of prime benefits, and most of
+          those who did offered less than three of them. Salary and benefits are
+          two of the most important factors when considering a job; I would
+          recommend recruiters to clearly outline these benefits in their job
+          descriptions to attract more candidates.
+        </span>
+      </div>
+      <div class="right-div">
+        <div class="salaries-plot-div">
+          <iframe
+            src="histograms.html"
+            width="100%"
+            height="110%"
+            style="border: none"
+          ></iframe>
+        </div>
+        <div class="benefits-plot-div">
+          <iframe
+            src="benefits.html"
+            width="100%"
+            height="110%"
+            style="border: none"
+          ></iframe>
+        </div>
+      </div>
     </div>
-    <div class="section section5" id="relationships">
-      <div class="left-div">A</div>
-      <div class="right-div">B</div>
+    <div class="section section5" id="reqs">
+      <div class="left-div" id="wordcloudTitles">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
+      <div class="right-div">
+        <span class="word-cloud-question">
+          What are the responsibilities?
+        </span>
+        <span class="word-cloud-text">
+          Before getting into the nitty gritty, we need to know which jobs are
+          available and who is offering them. Fig. 1.1 shows the 30 most common
+          job titles of our search. Variations of Data Scientist, Data Analyst,
+          and Machine Learning Engineer are the most needed positions. The other
+          two common titles involve NLP or Blockchain technology. <br />
+          <br />
+          With the DSAN program offering a wide range of classes, our students
+          should feel prepared to take on any of these roles. However, it is
+          important to note that the job titles are not always indicative of the
+          actual work. For example, a Data Scientist could be doing more data
+          engineering than data science; it is important to read job
+          descriptions to fully understand the role.
+        </span>
+      </div>
     </div>
-    <div class="section section6" id="conclusion">
+    <div class="section section2-1" id="overview">
+      <div class="left-div" id="wctext2">
+        <span class="word-cloud-question"> What skills do I need? </span>
+        <span class="word-cloud-text2">
+          <br />Sometimes a job title isn't enough; we want to know who is
+          offering the position. After all, company culture and values can be a
+          deal-maker! Fig. 1.2 shows us the 30 most common companies offering
+          jobs, with 5 being more present than all others: Upwork, Booz Allen,
+          Apple, Deloitte, and Walmart.
+          <br />
+          <br />
+          Further research on Upwork revealed that they are a freelancing site.
+          The job posts were for contract work, which is not ideal for students
+          looking for full-time positions. I would advise DSAN students to look
+          past these postings and instead focus on more traditional, full-time
+          jobs. The other common companies from the dataset are all well-known
+          and have a presence in the D.C. area. This is great news for students
+          who want to stay in the area after graduation!
+        </span>
+      </div>
+      <div class="right-div wordcloudCompanies" id="wordcloudCompanies">
+        <figure class="highcharts-figure">
+          <div id="bubbles2"></div>
+        </figure>
+      </div>
+    </div>
+    <div class="section section6" id="trends">
       <div class="left-div">A</div>
       <div class="right-div">B</div>
     </div>

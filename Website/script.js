@@ -261,3 +261,109 @@ Highcharts.chart("benefits-chart", {
     ],
   },
 });
+
+// -------------------------- reqs bubble chart
+
+Highcharts.chart("bubbles2", {
+  chart: {
+    type: "packedbubble",
+    height: "100%",
+    backgroundColor: "transparent",
+  },
+  title: {
+    text: "Top Requirements",
+    align: "center",
+  },
+  tooltip: {
+    useHTML: true,
+    pointFormat: "<b>{point.value}:</b> {point.name}",
+  },
+  plotOptions: {
+    packedbubble: {
+      minSize: "30%",
+      maxSize: "120%",
+      zMin: 0,
+      zMax: 1000,
+      layoutAlgorithm: {
+        splitSeries: false,
+        gravitationalConstant: 0.02,
+      },
+      dataLabels: {
+        enabled: true,
+        format: "{point.name}",
+        style: {
+          color: "black",
+          textOutline: "none",
+          fontWeight: "normal",
+        },
+      },
+    },
+  },
+  series: [
+    {
+      name: "Technical",
+      data: [
+        { name: "machine", value: 444 },
+        { name: "computer", value: 441 },
+        { name: "software", value: 308 },
+        { name: "python", value: 295 },
+        { name: "programming", value: 206 },
+        { name: "distributed", value: 166 },
+        { name: "computing", value: 154 },
+        { name: "SQL", value: 132 },
+        { name: "language", value: 142 },
+      ],
+    },
+    {
+      name: "Analytical",
+      data: [
+        { name: "data", value: 1152 },
+        { name: "analytics", value: 179 },
+        { name: "statistics", value: 147 },
+        { name: "analysis", value: 238 },
+        { name: "techniques", value: 144 },
+        { name: "models", value: 188 },
+        { name: "processing", value: 133 },
+        { name: "solutions", value: 133 },
+      ],
+    },
+    {
+      name: "Domain",
+      data: [
+        { name: "engineering", value: 323 },
+        { name: "environmental", value: 193 },
+        { name: "andor", value: 176 },
+      ],
+    },
+    {
+      name: "Soft",
+      data: [
+        { name: "communication", value: 190 },
+        { name: "teamwork", value: 211 },
+        { name: "understanding", value: 173 },
+        { name: "management", value: 200 },
+        { name: "business", value: 260 },
+      ],
+    },
+    {
+      name: "Other",
+      data: [
+        { name: "experience", value: 2002 },
+        { name: "learning", value: 760 },
+        { name: "skills", value: 513 },
+        { name: "science", value: 484 },
+        { name: "ability", value: 477 },
+        { name: "cloud", value: 301 },
+        { name: "deep", value: 268 },
+        { name: "development", value: 266 },
+        { name: "tools", value: 236 },
+        { name: "field", value: 210 },
+        { name: "developing", value: 153 },
+        { name: "design", value: 153 },
+        { name: "bachelors", value: 151 },
+        { name: "information", value: 139 },
+        { name: "etc", value: 164 },
+      ],
+    },
+  ],
+});
