@@ -116,3 +116,136 @@ Highcharts.chart("wordcloudCompanies", {
     verticalAlign: "bottom",
   },
 });
+
+// -------------------------- schedules chart
+
+Highcharts.chart("money-chart", {
+  chart: {
+    backgroundColor: "transparent",
+    type: "item",
+    width: 650,
+  },
+
+  title: {
+    text: "Distribution of Schedule Types",
+    x: 0,
+    y: 50,
+  },
+
+  legend: {
+    // labelFormat: '{name} <span style="opacity: 0.4">{y}</span>',
+    enabled: false,
+  },
+
+  series: [
+    {
+      name: "Representatives",
+      keys: ["name", "y", "color", "label"],
+      data: [
+        ["Contract", 50, "#EC7345", "Contract"],
+        ["Intern", 12, "#67DF7E", "Intern"],
+        ["Part-time", 3, "#3399FF", "Part-time"],
+        ["Full-time", 509, "#C26BED", "Full-time"],
+      ],
+      dataLabels: {
+        enabled: true,
+        format: "{point.label}",
+        style: {
+          textOutline: "3px contrast",
+          color: "white",
+        },
+      },
+
+      // Circular options
+      center: ["50%", "100%"],
+      size: "150%",
+      startAngle: -90,
+      endAngle: 90,
+    },
+  ],
+
+  responsive: {
+    rules: [
+      {
+        condition: {
+          maxWidth: 600,
+        },
+        chartOptions: {
+          series: [
+            {
+              dataLabels: {
+                distance: -30,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+});
+
+// -------------------------- benefits chart
+
+Highcharts.chart("benefits-chart", {
+  chart: {
+    backgroundColor: "transparent",
+    type: "item",
+    width: 650,
+  },
+
+  title: {
+    text: "Distribution of Work Modality",
+    x: 0,
+    y: -30,
+    verticalAlign: "bottom",
+  },
+
+  legend: {
+    // labelFormat: '{name} <span style="opacity: 0.4">{y}</span>',
+    enabled: false,
+  },
+
+  series: [
+    {
+      name: "Representatives",
+      keys: ["name", "y", "color", "label"],
+      data: [
+        ["Remote", 156, "#534FBE", "Remote"],
+        ["Office/Hybrid", 418, "#FFD700", "Office/Hybrid"],
+      ],
+      dataLabels: {
+        enabled: true,
+        format: "{point.label}",
+        style: {
+          textOutline: "3px contrast",
+          color: "white",
+        },
+      },
+
+      // Circular options
+      center: ["50%", "0%"],
+      size: "150%",
+      startAngle: 90,
+      endAngle: 270,
+    },
+  ],
+
+  responsive: {
+    rules: [
+      {
+        condition: {
+          maxWidth: 600,
+        },
+        chartOptions: {
+          series: [
+            {
+              dataLabels: {
+                distance: 30,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+});

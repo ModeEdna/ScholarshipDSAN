@@ -9,7 +9,7 @@
   <title>DSAN Job Market Analysis</title>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
-  <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+  <script src="https://code.highcharts.com/modules/item-series.js"></script>
 </head>
 
 <body>
@@ -296,11 +296,18 @@
         </figure>
       </div>
     </div>
-    <div class="section section3-1" id="overview">
-      <div class="left-div" id="money-chart">
-        <figure class="highcharts-figure">
-          <div id="container"></div>
-        </figure>
+    <div class="section section3-1">
+      <div class="left-div">
+        <div class="left-div div3-1">
+          <figure class="highcharts-figure">
+            <div id="money-chart"></div>
+          </figure>
+        </div>
+        <div class="left-div div3-2">
+          <figure class="highcharts-figure">
+            <div id="benefits-chart"></div>
+          </figure>
+        </div>
       </div>
       <div class="right-div">
         <span class="word-cloud-question"> Let's talk money! </span>
@@ -320,7 +327,7 @@
         </span>
       </div>
     </div>
-    <div class="section section3-2" id="overview">
+    <div class="section section3-2" id="money">
       <div class="left-div" id="benefits-chart">
         <span class="word-cloud-question"> How about benefits? </span>
         <span class="word-cloud-text2">
