@@ -274,6 +274,19 @@ Highcharts.chart("bubbles2", {
     text: "Top Requirements",
     align: "center",
   },
+  subtitle: {
+    text: "Figure 4.2",
+    verticalAlign: "top",
+  },
+  legend: {
+    enabled: true,
+    itemStyle: {
+      color: "#E1D9D1",
+    },
+    itemHoverStyle: {
+      color: "green",
+    },
+  },
   tooltip: {
     useHTML: true,
     pointFormat: "<b>{point.value}:</b> {point.name}",
@@ -291,10 +304,16 @@ Highcharts.chart("bubbles2", {
       dataLabels: {
         enabled: true,
         format: "{point.name}",
+        filter: {
+          property: "y",
+          operator: ">",
+          value: 175,
+        },
         style: {
-          color: "black",
+          color: "#E1D9D1",
           textOutline: "none",
           fontWeight: "normal",
+          fontSize: "10px",
         },
       },
     },
