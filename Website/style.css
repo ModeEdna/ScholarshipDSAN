@@ -336,6 +336,10 @@ main {
   height: 50%;
 }
 
+.rocket {
+  height: 80%;
+}
+
 .left-div,
 .right-div {
   width: 50%;
@@ -491,4 +495,13 @@ main {
 
 .section6 .right-div {
   align-items: baseline;
+}
+
+.section7 .left-div {
+  margin-left: 50px;
+  align-items: baseline;
+}
+
+.section7 .word-cloud-question {
+  margin-bottom: 15px;
 }

@@ -9,19 +9,65 @@
   </head>
   <body>
     <main>
-      Resources:<br />
+      <span style="font-weight: 700; padding: 0">Resources</span><br /><br />
       https://github.com/fireship-io/222-responsive-icon-nav-css/blob/master/public/theme.js
       (navbar)<br />
       https://www.highcharts.com (charts)<br />
       https://iconscout.com/ (icons and animations)<br />
-      https://phosphoricons.com/ (icons)
+      https://phosphoricons.com/ (icons) <br />
+      https://plotly.com/graphing-libraries/ (charts)
       <br />
       <br />
-      Methods:<br />
+      <br />
+      <span style="font-weight: 700; padding: 0">Methods</span> <br /><br />
       The work that I did with the data can be found in the
       <a href="https://github.com/ModeEdna/ScholarshipDSAN" target="_blank"
         >GitHub Repo</a
       >, where I stored the Python notebook used to do the initial analysis.
+      <br />
+      <br />
+      A quick overview of what I did is as follows:<br />
+      Load in the files for each location and concatenate them into one
+      dataframe. Added a column to know which dataframe each row came from.
+      Certain columns, such as Qualifications, had nested dictionaries, so I had
+      to grab those from the columns and turn each into a column. I then removed
+      duplicate postings and turned columns to their respective data types. I
+      renamed some columns for ease. <br />
+      <br />
+      Next, to use the text data for the word clouds, I had to again unpack
+      lists and concatenate everything into a single string. I then removed
+      stopwords, punctuation, and numbers. After this, I used the NLTK library
+      to tokenize the words and got the word counts for the columns of interest
+      (to create the plot). <br />
+      <br />
+      To create the distribution donuts, I parsed all text columns to see if any
+      made mention of remote work. If they did, I added a 'True' to a
+      Remote_Work column. I used the value counts of this column to create the
+      donut. Job posting were very clear about their schedule types, so I just
+      did a count on that column. <br />
+      <br />
+      To create the histograms, I had to create columns for the salary ranges
+      and benefit counts. To do so, I parsed the benefits, job description, and
+      salary columns to find any mention of the salaries. I then took the lowest
+      and highest value for their respective columns. The last salary column is
+      a simple subtraction of the max minus the min. For the cells that had an
+      hourly rate, I multiplied them by the average yearly hours worked (2,080)
+      to get a salary. The benefits column had a list of benefits, so I got the
+      count by getting the length of each list. For the prime benefits, I looked
+      at each list and if it had a mention of the benefit, I increased the prime
+      benefits column by 1 (without increasing if the word had already
+      appeared).<br />
+      <br />
+      The bubble plots were created with the same method as the word cloud; it's
+      just a different way to represent a count of text data. <br />
+      <br />
+      The final plot is a simple correlation call to the dataframe. Of course,
+      it only got the correlation for numerical values. <br />
+      <br />
+      <br />
+      <span style="font-weight: 700; padding: 0">Charts</span> <br /><br />
+      Charts were created with either HighCharts or Plotly. Both gave me HTML,
+      CSS, and JS outputs, so I just had to add those to the website files.
     </main>
   </body>
 </html>
