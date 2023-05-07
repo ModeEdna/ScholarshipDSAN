@@ -146,7 +146,7 @@ Highcharts.chart("money-chart", {
 
   series: [
     {
-      name: "Representatives",
+      name: "Count",
       keys: ["name", "y", "color", "label"],
       data: [
         ["Contract", 50, "#EC7345", "Contract"],
@@ -220,7 +220,7 @@ Highcharts.chart("benefits-chart", {
 
   series: [
     {
-      name: "Representatives",
+      name: "Count",
       keys: ["name", "y", "color", "label"],
       data: [
         ["Remote", 156, "#534FBE", "Remote"],
@@ -236,10 +236,10 @@ Highcharts.chart("benefits-chart", {
       },
 
       // Circular options
-      center: ["50%", "0%"],
+      center: ["50%", "75%"],
       size: "150%",
-      startAngle: 90,
-      endAngle: 270,
+      startAngle: -90,
+      endAngle: 90,
     },
   ],
 
