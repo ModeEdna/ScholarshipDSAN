@@ -328,6 +328,7 @@
           companies. Most of them are full-time, which is best for the stability
           and consistency that international students need. Contracting takes up
           about 10% of the jobs, but that's mostly from Upwork. <br />
+          <br />
         </span>
         <span class="word-cloud-question"> Can we work from home? <br /> </span>
         <span class="word-cloud-text">
@@ -335,7 +336,7 @@
           COVID cycle has ushered a new era of acceptance for work outside the
           office, so I would expect this number to increase in the future. The
           trend also makes sense because data science work is mostly done from
-          the computer, so office space isn't always necessary.
+          the computer, so office space isn't a true necessity.
         </span>
       </div>
     </div>
@@ -343,21 +344,24 @@
       <div class="left-div">
         <span class="word-cloud-question"> Let's talk about money! </span>
         <span class="word-cloud-text">
-          DSAN jobs are high-paying: the lower end starts around $100K and they
-          tend to max out around $200K. However, there is a big range for each
-          salary (~$60K). This is most likely due to experience amount and
-          skills obtained prior to the job.<br />
+          DSAN jobs are high-paying: the lower paying jobs starts around $100K
+          and they tend to max out around $200K. However, there is a big range
+          for each salary (~$60K). This is most likely due to experience amount
+          and skills obtained prior to the job. As you add more things to your
+          resume, you'll get closer to the higher side of the range.
+          <br />
+          <br />
           <br />
         </span>
         <span class="word-cloud-question"> How about benefits? <br /> </span>
         <span class="word-cloud-text">
           401K, health/life/dental insurance, bonus, tuition payments are all
           considered to be prime benefits. Fig 3.2 shows that 33% of the jobs
-          that listed benefits made no mention of prime benefits, and most of
-          those who did offered less than three of them. Salary and benefits are
-          two of the most important factors when considering a job; I would
-          recommend recruiters to clearly outline these benefits in their job
-          descriptions to attract more candidates.
+          that listed benefits mentioned none of them, and most of those who did
+          offered less than three. Since salary and benefits are two of the most
+          important factors when considering a job, I would recommend recruiters
+          to clearly outline both in their job descriptions to attract more
+          candidates.
         </span>
       </div>
       <div class="right-div">
@@ -365,7 +369,7 @@
           <iframe
             src="histograms.html"
             width="100%"
-            height="90%"
+            height="100%"
             style="border: none"
           ></iframe>
         </div>
@@ -373,7 +377,7 @@
           <iframe
             src="benefits.html"
             width="100%"
-            height="90%"
+            height="100%"
             style="border: none"
           ></iframe>
         </div>
@@ -388,19 +392,19 @@
           What are the responsibilities?
         </span>
         <span class="word-cloud-text">
-          Getting a count of each unique word from all the responsibilities text
-          for each job allowed me to create the bubble plot. The bigger the
-          bubble, the more common the word. With this graph available, we can
-          take a look at what type of tasks we'll be expected to do in the job.
+          I wanted to take a look at the responsibilities mentioned throuhgout
+          the job psotings. To do so, I had to create this bubble plot. It
+          represents a count for each word in the responsibilities column; the
+          bigger the bubble, the more common the word.
           <br />
           <br />
           As expected of DSAN roles, the most common words are data, learning,
-          experience, and many others that signal machine learning and data
+          experience, and many others that point to machine learning and data
           science. However, there are also words like business, team, and
-          management. This shows that companies are looking for well-rounded
-          candidates who can work with others and understand the business side
-          of things; a skill set that our program has focused on. Our students
-          should feel prepared to take on any of these roles.
+          management. Companies are looking for well-rounded candidates who work
+          well with others and understand business decision-making. This is a
+          skillset that our program has focused on, so our students should feel
+          prepared to take on any of these positions.
         </span>
       </div>
     </div>
@@ -408,10 +412,10 @@
       <div class="left-div" id="wctext2">
         <span class="word-cloud-question"> Which skills do we need? </span>
         <span class="word-cloud-text2">
-          <br />Usually the job responsibilities will list the skills required
+          <br />Usually, the job responsibilities will list the skills required
           for a position, but the qualifications sections could offer a bit more
           detail on what the company is looking for. For this plot, I used the
-          same method as the responsibilities plot.
+          same method as the one above.
           <br />
           <br />
           There is some overlap in the word counts, but the qualifications
@@ -419,7 +423,7 @@
           surprisingly, teamwork and communication are also listed as important
           skills. I would've expected SQL and possibly other languages to be
           more common, but this shows Python to be the most popular program, and
-          soft skills to be as important as hard skills.
+          soft skills to be as urgent as hard skills.
         </span>
       </div>
       <div class="right-div wordcloudCompanies" id="wordcloudCompanies">
@@ -431,21 +435,18 @@
         <div id="heatmap"></div>
       </div>
       <div class="right-div">
-        <span class="word-cloud-question">
-          Can we predict with the variables?
-        </span>
+        <span class="word-cloud-question"> Can we predict with the data? </span>
         <span class="word-cloud-text">
           With a clear understanding of the job market for DSAN students, I
           wanted to see if there were relationships between variables. I
           wondered if jobs with higher counts of responsibilities or
-          qualifications would beget higher salaries. Figure 5.1 shows us the
-          correlations between variables.<br />
+          qualifications would beget higher salaries. As shown in Fig. 5.1, this
+          is not the case.<br />
           <br />
-          Unfortunately, the data doesn't show any strong correlations. The only
-          columns with a correlation above 0.5 are the columns regarding salary,
-          but the jobs themselves give us the range. At best, we'd be able to
-          predict a higher range if they mention that salary is negotiable and
-          offer an initial amount.
+          Unfortunately, there aren't any strong correlations. The only columns
+          with a correlation above 0.5 are the columns regarding salary, but the
+          jobs themselves give us the range. At best, we'd be able to predict a
+          higher range if a positng mentions that salary is negotiable.
         </span>
       </div>
     </div>
@@ -454,34 +455,32 @@
         <span class="word-cloud-question"> What did we learn? </span>
         <span class="word-cloud-text conclusion1">
           Many companies are in need of DSAN students and offer high salaries,
-          some benefits, and relative work flexibility to lure in candidates.
-          They also mainly prefer full-time employees.
+          some benefits, and relative work flexibility to attract candidates.
         </span>
         <br />
         <span class="word-cloud-text conclusion2">
-          Landing a job requires both hard and soft skills, with an emphasis on
-          communication and teamwork.
-        </span>
-        <br />
-        <span class="word-cloud-text conclusion3">
-          Employers want us to have knowledge of Python, machine/deep learning,
-          and data analysis.
+          Landing a job requires hard and soft skills, with an emphasis on
+          communication, teamwork, Python, and machine/deep learning experience.
         </span>
         <br />
         <span class="word-cloud-text conclusion4">
           Available variables offer no predictability of other variables. More
-          data, and cleaner data, is needed to have a better chance at
-          predicting variables.
+          data, and cleaner data, is needed to improve predictability.
         </span>
         <br />
         <span class="word-cloud-text conclusion5">
           The DSAN program has taught us a lot of the skills needed to succeed,
           but it's up to our out-of-school work, experiences, and learning to
-          set us apart.
+          set ourselves apart.
         </span>
       </div>
       <div class="right-div">
-        <img class="rocket" src="img/astronaut.png" alt="Rocket" />
+        <img
+          style="opacity: 0.85"
+          class="rocket"
+          src="img/astronaut.png"
+          alt="Rocket"
+        />
       </div>
     </div>
   </main>

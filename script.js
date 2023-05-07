@@ -236,7 +236,7 @@ Highcharts.chart("benefits-chart", {
       },
 
       // Circular options
-      center: ["50%", "75%"],
+      center: ["50%", "85%"],
       size: "150%",
       startAngle: -90,
       endAngle: 90,
