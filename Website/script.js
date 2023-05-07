@@ -273,10 +273,12 @@ Highcharts.chart("bubbles2", {
   title: {
     text: "Top Requirements",
     align: "center",
+    y: 50,
   },
   subtitle: {
     text: "Figure 4.2",
     verticalAlign: "top",
+    y: 70,
   },
   legend: {
     enabled: true,
@@ -294,9 +296,9 @@ Highcharts.chart("bubbles2", {
   plotOptions: {
     packedbubble: {
       minSize: "30%",
-      maxSize: "120%",
+      maxSize: "150%",
       zMin: 0,
-      zMax: 1000,
+      zMax: 2000,
       layoutAlgorithm: {
         splitSeries: false,
         gravitationalConstant: 0.02,
@@ -383,6 +385,309 @@ Highcharts.chart("bubbles2", {
         { name: "information", value: 139 },
         { name: "etc", value: 164 },
       ],
+    },
+  ],
+});
+
+// -------------------------- reqs bubble chart
+
+Highcharts.chart("bubbles1", {
+  chart: {
+    type: "packedbubble",
+    height: "100%",
+    backgroundColor: "transparent",
+  },
+  title: {
+    text: "Top Responsibilities",
+    align: "center",
+  },
+  subtitle: {
+    text: "Figure 4.1",
+    verticalAlign: "top",
+  },
+  legend: {
+    enabled: true,
+    itemStyle: {
+      color: "#E1D9D1",
+    },
+    itemHoverStyle: {
+      color: "green",
+    },
+  },
+  tooltip: {
+    useHTML: true,
+    pointFormat: "<b>{point.value}:</b> {point.name}",
+  },
+  plotOptions: {
+    packedbubble: {
+      minSize: "30%",
+      maxSize: "150%",
+      zMin: 0,
+      zMax: 4000,
+      layoutAlgorithm: {
+        splitSeries: false,
+        gravitationalConstant: 0.02,
+      },
+      dataLabels: {
+        enabled: true,
+        format: "{point.name}",
+        filter: {
+          property: "y",
+          operator: ">",
+          value: 500,
+        },
+        style: {
+          color: "#E1D9D1",
+          textOutline: "none",
+          fontWeight: "normal",
+          fontSize: "10px",
+        },
+      },
+    },
+  },
+  series: [
+    {
+      name: "DSAN",
+      data: [
+        { name: "data", value: 3424 },
+        { name: "machine", value: 1237 },
+        { name: "science", value: 857 },
+        { name: "research", value: 775 },
+        { name: "models", value: 700 },
+        { name: "analysis", value: 612 },
+        { name: "analytics", value: 504 },
+        { name: "AI", value: 422 },
+      ],
+    },
+    {
+      name: "Experience",
+      data: [
+        { name: "experience", value: 3106 },
+        { name: "learning", value: 2052 },
+        { name: "skills", value: 909 },
+        { name: "technical", value: 653 },
+        { name: "knowledge", value: 610 },
+        { name: "degree", value: 493 },
+        { name: "qualifications", value: 443 },
+        { name: "training", value: 424 },
+        { name: "education", value: 393 },
+      ],
+    },
+    {
+      name: "Business",
+      data: [
+        { name: "business", value: 967 },
+        { name: "solutions", value: 758 },
+        { name: "management", value: 502 },
+        { name: "company", value: 492 },
+        { name: "environment", value: 475 },
+        { name: "employees", value: 461 },
+        { name: "teams", value: 447 },
+        { name: "employment", value: 422 },
+      ],
+    },
+    {
+      name: "Tech and Tools",
+      data: [
+        { name: "development", value: 937 },
+        { name: "software", value: 913 },
+        { name: "cloud", value: 695 },
+        { name: "computer", value: 676 },
+        { name: "information", value: 675 },
+        { name: "design", value: 642 },
+        { name: "tools", value: 538 },
+        { name: "technology", value: 548 },
+        { name: "systems", value: 576 },
+        { name: "technologies", value: 440 },
+      ],
+    },
+    {
+      name: "Other",
+      data: [
+        { name: "ability", value: 618 },
+        { name: "benefits", value: 586 },
+        { name: "position", value: 585 },
+        { name: "opportunity", value: 507 },
+        { name: "status", value: 499 },
+        { name: "health", value: 428 },
+        { name: "services", value: 424 },
+        { name: "provide", value: 439 },
+      ],
+    },
+    {
+      name: "Engineering",
+      data: [
+        { name: "engineering", value: 735 },
+        { name: "technical", value: 653 },
+        { name: "deep", value: 629 },
+        { name: "strong", value: 512 },
+        { name: "requirements", value: 576 },
+        { name: "build", value: 416 },
+      ],
+    },
+  ],
+});
+
+// -------------------------- heatmap
+
+Highcharts.chart("heatmap", {
+  chart: {
+    type: "heatmap",
+    marginTop: 60,
+    marginBottom: 100,
+    plotBorderWidth: 1,
+    backgroundColor: "transparent",
+    height: "90%",
+  },
+
+  title: {
+    text: "Correlations Between Variables",
+    x: 50,
+    style: {
+      fontSize: "1em",
+    },
+  },
+
+  subtitle: {
+    text: "Figure 5.1",
+    x: 50,
+    style: {
+      fontSize: "0.8em",
+    },
+  },
+
+  xAxis: {
+    categories: [
+      "Days Posted",
+      "Min Salary",
+      "Max Salary",
+      "Salary Range",
+      "Benefits",
+      "Qualifications",
+      "Responsibilities",
+      "Benefits",
+    ],
+    labels: {
+      style: {
+        color: "#E1D9D1",
+      },
+    },
+  },
+
+  yAxis: {
+    categories: [
+      "Days Posted",
+      "Min Salary",
+      "Max Salary",
+      "Salary Range",
+      "Benefits",
+      "Qualifications",
+      "Responsibilities",
+      "Benefits",
+    ],
+    labels: {
+      style: {
+        color: "#E1D9D1",
+      },
+    },
+    title: null,
+    reversed: true,
+  },
+
+  colorAxis: {
+    min: 0,
+    max: 1,
+    maxColor: "#c175ff",
+    minColor: "black",
+  },
+
+  legend: {
+    enabled: false,
+  },
+
+  tooltip: {
+    enabled: false,
+  },
+
+  series: [
+    {
+      name: "Correlations",
+      borderWidth: 1,
+      data: [
+        [0, 0, 1],
+        [0, 1, 0.11],
+        [0, 2, 0.05],
+        [0, 3, -0.12],
+        [0, 4, 0.015],
+        [0, 5, 0.024],
+        [0, 6, 0.042],
+        [0, 7, -0.037],
+        [1, 0, 0.11],
+        [1, 1, 1],
+        [1, 2, 0.81],
+        [1, 3, 0.27],
+        [1, 4, 0.04],
+        [1, 5, 0.06],
+        [1, 6, -0.01],
+        [1, 7, -0.08],
+        [2, 0, 0.052],
+        [2, 1, 0.81],
+        [2, 2, 1],
+        [2, 3, 0.78],
+        [2, 4, 0.06],
+        [2, 5, 0.01],
+        [2, 6, 0.004],
+        [2, 7, -0.004],
+        [3, 0, -0.12],
+        [3, 1, -0.27],
+        [3, 2, 0.78],
+        [3, 3, 1],
+        [3, 4, -0.18],
+        [3, 5, 0.06],
+        [3, 6, -0.03],
+        [3, 7, 0.15],
+        [4, 0, 0.015],
+        [4, 1, 0.044],
+        [4, 2, 0.059],
+        [4, 3, -0.186],
+        [4, 4, 1],
+        [4, 5, -0.2],
+        [4, 6, 0.044],
+        [4, 7, -0.31],
+        [5, 0, 0.24],
+        [5, 1, 0.059],
+        [5, 2, 0.01],
+        [5, 3, 0.06],
+        [5, 4, -0.2],
+        [5, 5, 1],
+        [5, 6, 0.075],
+        [5, 7, 0.175],
+        [6, 0, 0.04],
+        [6, 1, -0.001],
+        [6, 2, 0.004],
+        [6, 3, -0.026],
+        [6, 4, 0.044],
+        [6, 5, 0.074],
+        [6, 6, 1],
+        [6, 7, -0.023],
+        [7, 0, -0.037],
+        [7, 1, -0.078],
+        [7, 2, -0.003],
+        [7, 3, 0.15],
+        [7, 4, -0.31],
+        [7, 5, 0.17],
+        [7, 6, -0.02],
+        [7, 7, 1],
+      ],
+      dataLabels: {
+        enabled: true,
+        style: {
+          color: "#E1D9D1",
+          textOutline: "none",
+          fontWeight: "normal",
+          fontSize: "10px",
+        },
+      },
     },
   ],
 });

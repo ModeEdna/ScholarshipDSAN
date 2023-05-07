@@ -11,6 +11,7 @@
   <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
   <script src="https://code.highcharts.com/modules/item-series.js"></script>
   <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
 </head>
 
 <body>
@@ -331,7 +332,7 @@
         </span>
       </div>
     </div>
-    <div class="section section4" id="give">
+    <div class="section section4" id="benefits2">
       <div class="left-div">
         <span class="word-cloud-question"> Let's talk about money! </span>
         <span class="word-cloud-text">
@@ -357,7 +358,7 @@
           <iframe
             src="histograms.html"
             width="100%"
-            height="110%"
+            height="90%"
             style="border: none"
           ></iframe>
         </div>
@@ -365,7 +366,7 @@
           <iframe
             src="benefits.html"
             width="100%"
-            height="110%"
+            height="90%"
             style="border: none"
           ></iframe>
         </div>
@@ -373,48 +374,45 @@
     </div>
     <div class="section section5" id="reqs">
       <div class="left-div" id="wordcloudTitles">
-        <figure class="highcharts-figure">
-          <div id="container"></div>
-        </figure>
+        <div id="bubbles1"></div>
       </div>
       <div class="right-div">
         <span class="word-cloud-question">
           What are the responsibilities?
         </span>
         <span class="word-cloud-text">
-          Before getting into the nitty gritty, we need to know which jobs are
-          available and who is offering them. Fig. 1.1 shows the 30 most common
-          job titles of our search. Variations of Data Scientist, Data Analyst,
-          and Machine Learning Engineer are the most needed positions. The other
-          two common titles involve NLP or Blockchain technology. <br />
+          Getting a count of each unique word from all the responsibilities text
+          for each job allowed me to create the bubble plot. The bigger the
+          bubble, the more common the word. With this graph available, we can
+          take a look at what type of tasks we'll be expected to do in the job.
           <br />
-          With the DSAN program offering a wide range of classes, our students
-          should feel prepared to take on any of these roles. However, it is
-          important to note that the job titles are not always indicative of the
-          actual work. For example, a Data Scientist could be doing more data
-          engineering than data science; it is important to read job
-          descriptions to fully understand the role.
+          <br />
+          As expected of DSAN roles, the most common words are data, learning,
+          experience, and many others that signal machine learning and data
+          science. However, there are also words like business, team, and
+          management. This shows that companies are looking for well-rounded
+          candidates who can work with others and understand the business side
+          of things; a skill set that our program has focused on. Our students
+          should feel prepared to take on any of these roles.
         </span>
       </div>
     </div>
-    <div class="section section2-1" id="overview">
+    <div class="section section5-1" id="overview">
       <div class="left-div" id="wctext2">
         <span class="word-cloud-question"> Which skills do we need? </span>
         <span class="word-cloud-text2">
-          <br />Sometimes a job title isn't enough; we want to know who is
-          offering the position. After all, company culture and values can be a
-          deal-maker! Fig. 1.2 shows us the 30 most common companies offering
-          jobs, with 5 being more present than all others: Upwork, Booz Allen,
-          Apple, Deloitte, and Walmart.
+          <br />Usually the job responsibilities will list the skills required
+          for a position, but the qualifications sections could offer a bit more
+          detail on what the company is looking for. For this plot, I used the
+          same method as the responsibilities plot.
           <br />
           <br />
-          Further research on Upwork revealed that they are a freelancing site.
-          The job posts were for contract work, which is not ideal for students
-          looking for full-time positions. I would advise DSAN students to look
-          past these postings and instead focus on more traditional, full-time
-          jobs. The other common companies from the dataset are all well-known
-          and have a presence in the D.C. area. This is great news for students
-          who want to stay in the area after graduation!
+          There is some overlap in the word counts, but the qualifications
+          sections list more hard skills such as Python and programming. Not
+          surprisingly, teamwork and communication are also listed as important
+          skills. I would've expected SQL and possibly other languages to be
+          more common, but this shows Python to be the most popular program, and
+          soft skills to be as important as hard skills.
         </span>
       </div>
       <div class="right-div wordcloudCompanies" id="wordcloudCompanies">
@@ -422,6 +420,29 @@
       </div>
     </div>
     <div class="section section6" id="trends">
+      <div class="left-div">
+        <div id="heatmap"></div>
+      </div>
+      <div class="right-div">
+        <span class="word-cloud-question">
+          Can we predict with the variables?
+        </span>
+        <span class="word-cloud-text">
+          With a clear understanding of the job market for DSAN students, I
+          wanted to see if there were relationships between variables. I
+          wondered if jobs with higher counts of responsibilities or
+          qualifications would beget higher salaries. Figure 5.1 shows us the
+          correlations between variables.<br />
+          <br />
+          Unfortunately, the data doesn't show any strong correlations. The only
+          columns with a correlation above 0.5 are the columns regarding salary,
+          but the jobs themselves give us the range. At best, we'd be able to
+          predict a higher range if they mention that salary is negotiable and
+          offer an initial amount.
+        </span>
+      </div>
+    </div>
+    <div class="section section7" id="conclusion">
       <div class="left-div">A</div>
       <div class="right-div">B</div>
     </div>

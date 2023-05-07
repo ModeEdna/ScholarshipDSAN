@@ -214,8 +214,14 @@
 #wordcloudCompanies,
 #money-chart,
 #benefits-chart,
-#bubbles2 {
+#bubbles2,
+#bubbles1 {
   height: 90%;
+}
+
+#heatmap {
+  height: 90%;
+  margin-top: 160px;
 }
 
 #wordcloudCompanies {
@@ -457,4 +463,32 @@ main {
 
 .salaries-plot-div {
   margin-bottom: -20px;
+}
+
+.section5 {
+  border-bottom: 0px;
+}
+
+.section5-1 {
+  border-bottom: 2px solid rgba(219, 140, 22, 0.15);
+}
+
+#bubbles1 {
+  margin-top: 75px;
+}
+
+.section5-1 .right-div {
+  margin-top: 35px;
+}
+
+.section5 .right-div {
+  align-items: baseline;
+}
+
+.section5-1 .left-div {
+  align-items: baseline;
+}
+
+.section6 .right-div {
+  align-items: baseline;
 }
