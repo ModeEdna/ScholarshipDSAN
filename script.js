@@ -56,6 +56,7 @@ Highcharts.chart("wordcloudTitles", {
   subtitle: {
     text: "Figure 1.1",
     verticalAlign: "bottom",
+    y: -40,
   },
 });
 

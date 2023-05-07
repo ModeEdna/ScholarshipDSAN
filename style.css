@@ -295,7 +295,7 @@ main {
 .section5,
 .section6 {
   background-color: #000000;
-  border-bottom: 2px solid rgba(219, 140, 22, 0.15);
+  border-bottom: 2px solid rgba(102, 73, 184, 0.3);
   color: rgb(232, 232, 232);
 }
 
@@ -543,4 +543,8 @@ main {
 
 .modal-button:hover {
   cursor: pointer;
+}
+
+.section2 .left-div {
+  margin-bottom: 53px;
 }
